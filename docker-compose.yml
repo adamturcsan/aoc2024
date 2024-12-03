@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  aoc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      HOST_IP: ${HOST_IP}
+    volumes:
+     - .:/var/www
