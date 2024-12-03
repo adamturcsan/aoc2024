@@ -8,8 +8,11 @@ declare(strict_types=1);
 namespace Aoc2024;
 
 use Aoc2024\Report;
-use function array_reduce;
 
+use function array_reduce;
+use function array_map;
+use function explode;
+use function trim;
 
 /**
  * Description of Report

@@ -7,16 +7,13 @@ declare(strict_types=1);
 
 namespace Aoc2024;
 
-use function array_combine;
-use function array_shift;
-use function array_values;
-use function end;
-
-use function sort;
-use function var_dump;
-
-
-
+use function abs;
+use function array_all;
+use function array_key_last;
+use function array_map;
+use function array_slice;
+use function array_splice;
+use function range;
 
 /**
  * Description of Report

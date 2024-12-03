@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Aoc2024;
 
+use function abs;
 use function array_sum;
 use function sort;
 

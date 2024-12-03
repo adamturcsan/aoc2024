@@ -7,7 +7,11 @@ declare(strict_types=1);
 
 namespace Aoc2024;
 
+use function array_map;
+use function explode;
 use function fgets;
+use function fopen;
+use function trim;
 
 /**
  * Description of ListInput
