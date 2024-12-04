@@ -23,10 +23,6 @@ final class ReportList
 {
     private array $reports = [];
 
-    public int $reportCount {
-        get => count($this->reports);
-    }
-
     public function __construct(Report ... $reports) {
         $this->reports = $reports;
     }
