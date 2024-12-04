@@ -22,3 +22,11 @@ echo $reportList->countDampenedSafeReport() . PHP_EOL;
 echo microtime(true) - $time . PHP_EOL;
 
 var_dump(memory_get_usage() / 1024, memory_get_peak_usage() / 1024);
+
+$time = microtime(true);
+$memoryCleaner = new Aoc2024\MemoryCleaner(Aoc2024\Memory::fromFile(__DIR__ . '/input/day3'));
+echo $memoryCleaner->getCleanedUpResult() . PHP_EOL;
+echo $memoryCleaner->getConditionalCleanedUpResult() . PHP_EOL;
+echo microtime(true) - $time . PHP_EOL;
+
+var_dump(memory_get_usage() / 1024, memory_get_peak_usage() / 1024);
