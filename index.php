@@ -55,3 +55,15 @@ echo $wordSearch->countXshapedMas() . PHP_EOL;
 echo microtime(true) - $time . PHP_EOL;
 
 var_dump(memory_get_usage() / 1024, memory_get_peak_usage() / 1024);
+
+echo '======' . PHP_EOL;
+echo 'DAY  5' . PHP_EOL;
+echo '======' . PHP_EOL;
+
+$time = microtime(true);
+$update = new Aoc2024\Update(file_get_contents(__DIR__ . '/input/day5'));
+echo $update->validInstructionSum() . PHP_EOL;
+echo $update->reorderedInstructionSum() . PHP_EOL;
+echo microtime(true) - $time . PHP_EOL;
+
+var_dump(memory_get_usage() / 1024, memory_get_peak_usage() / 1024);
