@@ -9,7 +9,7 @@ endif
 init_app :
 	docker-compose up -d
 
-run : init_host_ip init_app
+up : init_host_ip init_app
 
 stop :
 	docker-compose down
@@ -19,3 +19,12 @@ cli:
 
 unit-test:
 	docker-compose exec -e XDEBUG_MODE=coverage aoc vendor/bin/phpunit
+
+unit-test-debug:
+	docker-compose exec -e XDEBUG_MODE=debug aoc vendor/bin/phpunit
+
+run:
+	docker-compose exec -e XDEBUG_MODE=off aoc php -dopcache.enable=1 -dopcache.jit=on -dopcache.jit_buffer_size=128M index.php
+
+run-debug:
+	docker-compose exec -e XDEBUG_MODE=debug aoc php index.php

@@ -66,4 +66,15 @@ echo $update->validInstructionSum() . PHP_EOL;
 echo $update->reorderedInstructionSum() . PHP_EOL;
 echo microtime(true) - $time . PHP_EOL;
 
+
+echo '======' . PHP_EOL;
+echo 'DAY  9' . PHP_EOL;
+echo '======' . PHP_EOL;
+
+$time = microtime(true);
+$disk = Aoc2024\Disk::fromRawFile(__DIR__ . '/input/day9');
+echo 'answer:' . $disk->rearrange()->split()->checksum() . PHP_EOL;
+echo 'answer:' . $disk->rearrangeWholeFiles()->split()->checksum() . PHP_EOL;
+echo microtime(true) - $time . PHP_EOL;
+
 var_dump(memory_get_usage() / 1024, memory_get_peak_usage() / 1024);
